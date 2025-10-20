@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    nav a {
+        margin-left: 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    }
+
+</style>
+<body>
+    <!-- Header -->
+    <header class="headerproduk">
+        <div class="logoproduk">
+            <a href="index.html">LaptopStore</a>
+        </div>
+        <nav class="navindex">
+            <a href="index.html">Home</a>
+            <a href="#">Produk</a>
+            <a href="contact.html">Kontak</a>
+        </nav>
+        <div class="nav-right">
+            <nav>
+                <a href="login.html">LogOut</a>
+            </nav>
+        </div>
+        
+    </header>
+    <!-- Produk -->
+    <section id="produk" class="produk">
+        <h2>Temukan Laptop Favoritmu!</h2>
+        
+            <div class="filter-search">
+                <!-- Dropdown Kategori -->
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">Semua</button>
+                    <div id="dropdown-content" class="dropdown-content">
+                        <button onclick="filterKategori('all')">Semua</button>
+                        <button onclick="filterKategori('ASUS')">ASUS</button>
+                        <button onclick="filterKategori('Acer')">Acer</button>
+                        <button onclick="filterKategori('Lenovo')">Lenovo</button>
+                    </div>
+                </div>
+        
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Cari produk..." onkeyup="searchProduk()">
+                </div>
+            </div>
+        
+        </section>
+
+        <!-- FILTER END -->
+
+        <div class="grid-produk">
+
+                <!-- ASUS -->
+
+            <div class="card" data-kategori="ASUS">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 1">
+                <h3>ASUS ZenBook 14</h3>
+                <p>Rp 13.999.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="ASUS">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 1">
+                <h3>ASUS ZenBook 14</h3>
+                <p>Rp 13.999.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="ASUS">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 1">
+                <h3>ASUS ZenBook 14</h3>
+                <p>Rp 13.999.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="ASUS">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 1">
+                <h3>ASUS ZenBook 14</h3>
+                <p>Rp 13.999.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="ASUS">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 1">
+                <h3>ASUS ZenBook 14</h3>
+                <p>Rp 13.999.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="ASUS">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 1">
+                <h3>ASUS ZenBook 14</h3>
+                <p>Rp 13.999.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="ASUS">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 1">
+                <h3>ASUS ZenBook 14</h3>
+                <p>Rp 13.999.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="ASUS">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 1">
+                <h3>ASUS ZenBook 14</h3>
+                <p>Rp 13.999.000</p>
+                <button>Detail</button>
+            </div>
+           
+                <!-- Acer -->
+
+            <div class="card" data-kategori="Acer">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 2">
+                <h3>Acer Swift 3</h3>
+                <p>Rp 11.499.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Acer">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 2">
+                <h3>Acer Swift 3</h3>
+                <p>Rp 11.499.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Acer">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 2">
+                <h3>Acer Swift 3</h3>
+                <p>Rp 11.499.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Acer">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 2">
+                <h3>Acer Swift 3</h3>
+                <p>Rp 11.499.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Acer">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 2">
+                <h3>Acer Swift 3</h3>
+                <p>Rp 11.499.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Acer">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 2">
+                <h3>Acer Swift 3</h3>
+                <p>Rp 11.499.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Acer">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 2">
+                <h3>Acer Swift 3</h3>
+                <p>Rp 11.499.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Acer">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 2">
+                <h3>Acer Swift 3</h3>
+                <p>Rp 11.499.000</p>
+                <button>Detail</button>
+            </div>
+
+                <!-- Lenovo -->
+
+            <div class="card" data-kategori="Lenovo">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 3">
+                <h3>Lenovo IdeaPad Slim</h3>
+                <p>Rp 9.799.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Lenovo">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 3">
+                <h3>Lenovo IdeaPad Slim</h3>
+                <p>Rp 9.799.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Lenovo">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 3">
+                <h3>Lenovo IdeaPad Slim</h3>
+                <p>Rp 9.799.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Lenovo">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 3">
+                <h3>Lenovo IdeaPad Slim</h3>
+                <p>Rp 9.799.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Lenovo">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 3">
+                <h3>Lenovo IdeaPad Slim</h3>
+                <p>Rp 9.799.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Lenovo">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 3">
+                <h3>Lenovo IdeaPad Slim</h3>
+                <p>Rp 9.799.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Lenovo">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 3">
+                <h3>Lenovo IdeaPad Slim</h3>
+                <p>Rp 9.799.000</p>
+                <button>Detail</button>
+            </div>
+            <div class="card" data-kategori="Lenovo">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=400&q=80" alt="Laptop 3">
+                <h3>Lenovo IdeaPad Slim</h3>
+                <p>Rp 9.799.000</p>
+                <button>Detail</button>
+            </div>
+            
+        </div>
+    </section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <script>
+        function filterKategori(kategori) {
+         const cards = document.querySelectorAll('.card');
+             cards.forEach(card => {
+                 if (kategori === 'all' || card.dataset.kategori === kategori) {
+                    card.style.display = 'block';
+                 } else {
+                      card.style.display = 'none';
+             }
+            });
+         }
+
+        //  searcbar
+        function cariProduk() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        const namaProduk = card.querySelector('h3').textContent.toLowerCase();
+        if (namaProduk.includes(input)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+    function filterKategori(kategori) {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            if (kategori === 'all' || card.dataset.kategori === kategori) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // ubah teks tombol dropdown sesuai kategori
+        document.querySelector('.dropbtn').textContent = kategori === 'all' ? 'Semua' : kategori;
+        document.getElementById('dropdown-content').style.display = 'none';
+    }
+
+    // tampilkan/sembunyikan dropdown
+    function toggleDropdown() {
+        const dropdown = document.getElementById('dropdown-content');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // pencarian produk
+    function searchProduk() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            const nama = card.querySelector('h3').textContent.toLowerCase();
+            card.style.display = nama.includes(input) ? 'block' : 'none';
+        });
+    }
+
+    // tutup dropdown saat klik di luar
+    window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            document.getElementById('dropdown-content').style.display = 'none';
+        }
+    }
+
+
+    </script>
+</body>
+</html>
