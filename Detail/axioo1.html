@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Detail Produk</title>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+    background-color: #f4f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    }
+
+    .container {
+    width: 90%;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 80px 0;
+    }
+
+    /* Tombol kembali */
+    .back-btn {
+    background: #e3eeff;
+    border: none;
+    color: #007bff;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    align-self: flex-start;
+    }
+
+    .back-btn:hover {
+    background: #d3e4ff;
+    }
+
+    /* Card produk */
+    .product-card {
+    text-align: left;
+    }
+
+
+    .product-image {
+    border-radius: 15px;
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    
+    }
+
+    .product-info {
+    margin-top: 15px;
+    }
+
+    .product-title {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 5px;
+    }
+
+    .product-desc {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    }
+
+    .product-price {
+    color: #007bff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    }
+
+    /* Tombol Checkout */
+    .checkout-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    padding: 12px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+    }
+
+    .checkout-btn:hover {
+    background: #0065d1;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Tombol Kembali -->
+    <button class="back-btn" onclick="window.history.back()">← Kembali</button>
+    
+    <!-- Bagian Detail Produk -->
+    <div class="product-card">
+    <img src="../img/axioo1.webp" class="product-image" />
+    <div class="product-info">
+        <h2 class="product-title">Axioo Laptop Hype 10 Intel Celeron N4020</h2>
+        <p class="product-price">Rp 3.149.000</p>
+        <br>
+        <pre class="product-desc">
+AXIOO HYPE 10 
+
+#lowPRICEhighPERFORMANCE #HYPEUPYOURPERFORMANCE
+
+AXIOO Hype 10 hadir dengan prosesor Intel Celeron N4020, RAM 8GB, dan penyimpanan 256GB. Cocok banget buat pelajar, mahasiswa,
+atau siapa saja yang butuh laptop cepat, lega, dan handal untuk tugas harian, skripsi, browsing, atau hiburan ringan.
+
+Desain ringan dan simpel, gampang dibawa ke kampus atau kafe favoritmu. Dengan garansi resmi AXIOO 1 tahun dan adaptor 1 tahun, 
+kamu bisa belajar dan bekerja tanpa khawatir.
+
+Laptop lokal berkualitas tinggi dengan harga yang tetap ramah di kantong, siap menemani produktivitasmu setiap hari.
+
+
+
+=> Specification :
+
+- Processor   : Intel® Celeron N4020 @1.1 GHz Base, 2.8 GHz Turbo (2 Cores, 2 Threads, TDP:6 W)
+
+- Graphics   : Intel UHD Graphics 600
+
+- RAM   : 8GB x 1 SODIMM DDR4 2400MHz (Onboard)
+
+- Display   : 1366x768 (16:9) 14.1" TN HD 
+
+- Storage   : 256GB M.2 2280 SATA, 1 x M.2 2280 SATA (Free slot)
+
+- Operating System   : Windows 
+
+- Battery   : 38Wh, 5000mAh
+
+- Connection : Wi-Fi Intel 9560 a/b/g/n/ac, Bluetooth 5.1
+
+- Audio : HD Audio, Built-in Microphone 
+
+- Speaker : 2x Speakers  
+
+- Camera / Webcam : 2Mpx (With Privacy Shutter)
+
+
+
+=> Ports:
+
+- 2x USB 3.0 ports
+
+- 1x USB 2.0 port
+
+- 2x USB Type C ports (Data Only)
+
+- 1x 3.5mm 2-in-1 Audio Combo Jack
+
+- 1xHDMI output port
+
+- 1x DC-in jack port
+
+
+
+=> Security :
+
+Kensington lock
+
+fTPM (Firmware Trusted Platform Module)
+
+
+
+=> Dimension and Weight:
+
+Dimension: 323.4(W) x 219.9(H) x 20.7(D)mm
+
+Berat: 1.4 kg
+
+
+
+=> Other design : 
+
+180° Hinge Rotate
+
+
+
+=> Garansi resmi dari Axioo 1 Tahun & Accidental Damage Protection 1 Tahun (ADP)
+
+
+
+=> Catatan PENTING!
+
+Untuk pengiriman keluar pulau Jawa atau menggunakan ekspedisi CARGO/TRUCKING, disarankan memilih packing kayu dietalase.
+
+Untuk keamanan tambahan karena paket sering digabung dengan barat berat lainnya.
+
+TANPA VIDEO UNBOXING = KOMPLAIN TIDAK DITERIMA !
+
+________________________________________
+        </pre>
+    </div>
+    </div>
+
+    <!-- Tombol Checkout -->
+    
+        <button class="checkout-btn" onclick="window.location.href='../checkout.html'">Checkout</button>
+    
+
+</div>
+</body>
+</html>

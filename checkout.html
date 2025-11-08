@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Pembelian Laptop</title>
+    <style >
+        /* RESET DASAR */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* LATAR BELAKANG BIRU GRADIENT */
+        body {
+            background: linear-gradient(135deg, #007BFF, #007BFF);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* KONTAINER FORM */
+        .checkout-container {
+            width: 100%;
+            max-width: 1000px;
+            background-color: #ffffff;
+            color: #222;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            animation: fadeIn 0.6s ease;
+            margin: 60px 0;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #0a74da;
+            font-weight: 700;
+        }
+
+        /* FORM */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #0a2f6b;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #d0d8ff;
+            font-size: 15px;
+            transition: all 0.2s;
+            background-color: #f8faff;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #0a74da;
+            box-shadow: 0 0 5px rgba(10, 116, 218, 0.3);
+            outline: none;
+            background-color: #ffffff;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        /* TOMBOL */
+        .btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 25px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px 0;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-back {
+            background-color: #e0e6ff;
+            color: #0a2f6b;
+            margin-right: 10px;
+        }
+
+        .btn-back:hover {
+            background-color: #c7d3ff;
+        }
+
+        .btn-checkout {
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 91, 187, 0.3);
+        }
+
+        .btn-checkout:hover {
+            background: linear-gradient(90deg, #0069d9, #004b9a);
+            transform: scale(1.02);
+            box-shadow: 0 6px 14px rgba(0, 91, 187, 0.4);
+        }
+
+        /* POPUP (MODAL) */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            animation: fadeInOverlay 0.3s ease forwards;
+        }
+
+        @keyframes fadeInOverlay {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .popup-box {
+            background: #fff;
+            color: #0a2f6b;
+            padding: 30px 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+            animation: popupAppear 0.4s ease;
+        }
+
+        @keyframes popupAppear {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .popup-box h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #0a74da;
+        }
+
+        .popup-box p {
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .popup-box button {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 8px;
+            background-color: #0a74da;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .popup-box button:hover {
+            background-color: #004b9a;
+        }
+
+        /* RESPONSIF */
+        @media (max-width: 480px) {
+            .checkout-container {
+                padding: 25px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            button {
+                font-size: 14px;
+            }
+            .popup-box {
+                width: 80%;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="checkout-container">
+        <h2>Masukkan Alamat</h2>
+        <form id="checkoutForm">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap Anda">
+            </div>
+
+            <div class="form-group">
+                <label for="telepon">Nomor Telepon</label>
+                <input type="tel" id="telepon" name="telepon" required placeholder="Contoh: 08123456789">
+            </div>
+
+            <div class="form-group">
+                <label for="jalan">Nama Jalan</label>
+                <input type="text" id="jalan" name="jalan" required placeholder="Contoh: Jl. Merdeka No. 10">
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat Lengkap</label>
+                <textarea id="alamat" name="alamat" rows="3" required placeholder="Masukkan detail alamat Anda"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="kodepos">Kode Pos</label>
+                <input type="number" id="kodepos" name="kodepos" required placeholder="Contoh: 12345">
+            </div>
+
+            <div class="btn-group">
+                <button type="button" class="btn-back" onclick="window.location.href='produk.html'">Kembali</button>
+                <button type="submit" class="btn-checkout">Checkout Sekarang</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- POPUP -->
+    <div class="popup-overlay" id="popup">
+        <div class="popup-box">
+            <h3>Pesananmu Sedang Diproses 💙</h3>
+            <p>Terima kasih telah berbelanja di toko kami.<br>Mohon tunggu, pesananmu akan segera dikonfirmasi.</p>
+            <button onclick="window.location.href='produk.html'">Tutup</button>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('checkoutForm');
+        const popup = document.getElementById('popup');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // Hindari reload halaman
+            popup.style.display = 'flex'; // Tampilkan popup
+        });
+
+        function closePopup() {
+            popup.style.display = 'none'; // Tutup popup
+            // Arahkan ke halaman lain jika ingin (contoh sukses.html)
+            // window.location.href = "sukses.html";
+        }
+    </script>
+</body>
+</html>

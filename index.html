@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaptopStore - Toko Laptop Modern</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="#">LaptopStore</a>
+        </div>
+        <nav class="navindex">
+            <a href="#">HOME</a>
+            <a href="produk.html">CATALOG</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <div class="nav-right">
+            <nav>
+                <a href="login.html">LOG OUT</a>
+            </nav>
+        </div>
+            
+    </header>
+
+
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Temukan Laptop Impianmu di Sini</h1>
+            <p>Pilihan terbaik untuk kebutuhan kerja, belajar, dan gaming.</p>
+            <a href="produk.html" class="btn">Lihat Produk</a>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 LaptopStore. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+
+window.addEventListener('scroll', function() {
+  const header = document.querySelector('header');
+
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+    //logo
+    window.addEventListener('scroll', function() {
+  const header = document.querySelector('header');
+  const navLinks = document.querySelectorAll('.logo a');
+
+  if (window.scrollY > 50) {
+    header.style.background = 'rgba(255, 255, 255, 0.95)';
+    header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+    navLinks.forEach(link => link.style.color = '#007BFF');
+  } else {
+    header.style.background = 'rgba(255, 255, 255, 0)';
+    header.style.boxShadow = 'none';
+    navLinks.forEach(link => link.style.color = '#fff'); 
+  }
+});
+    
+    </script>
+</body>
+</html>

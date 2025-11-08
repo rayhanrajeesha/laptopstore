@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('font/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+/* Header */
+
+
+.headerproduk {
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+    transition: background 0.3s ease;
+
+}
+header {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    z-index: 100;
+    transition: background 0.3s ease;
+
+}
+
+.navindex {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex: 1;
+    margin-left: -70px; /* geser 30px ke kiri */
+    font-size: 15px;
+  }
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}       
+
+
+.logo {
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+}
+
+.logoproduk a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logoproduk {
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #007BFF;
+}
+
+
+nav a {
+
+    margin-left: 1px;
+    text-decoration: none;
+    color: white; 
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4AD3FF;
+}
+
+header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+header.scrolled nav a {
+    color: #333;
+}
+  
+header.scrolled nav a:hover {
+    color: #007BFF;
+}
+/* Hero Section */
+.hero {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background-color: #fff; */
+
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* cukup tinggi untuk isi */
+    background: url('img/bg.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    box-shadow:  0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 0;
+    padding: 0 80px; /* memberi jarak dari sisi kiri dan kanan */
+    
+}
+
+.hero-text {
+    color: #fff;
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    color: #fff;
+}
+
+.hero-text p {
+    margin: 15px 0 25px;
+    color: #fff;
+}
+
+.btn {
+    background-color: #fff;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* tombol checkout di priudk */
+.cekot {
+    background-color: #77dd77;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-left: 2px;
+    transition: 0.3s;
+}
+
+.cekot:hover {
+    background-color: #48ac48;
+    color: white;
+}
+.btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+.hero img {
+    width: 45%;
+    border-radius: 10px;
+}
+
+/* Filter + Search bar container */
+.filter-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.dropbtn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #007bff;
+    min-width: 120px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 5;
+    margin-top: 8px;
+}
+
+.dropdown-content button {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown-content button:hover {
+    background-color: #0056b3;
+}
+
+/* Search bar */
+.search-bar input {
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    font-size: 14px;
+}
+
+/* filter kategori */
+.filter-kategori {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.filter-kategori button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.filter-kategori button:hover {
+    background: #0056b3;
+}.filter-kategori {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.filter-kategori button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.filter-kategori button:hover {
+    background: #0056b3;
+}
+
+/* Produk */
+.produk {
+    padding: 60px 80px;
+    text-align: center;
+    padding: 20px; 
+}
+
+.produk h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.grid-produk {
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 0 60px;     /* tambahkan ruang kiri-kanan */
+    box-sizing: border-box;display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 0 60px;     /* tambahkan ruang kiri-kanan */
+    box-sizing: border-box;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 15px 0 8px;
+    font-size: 18px;
+}
+
+.card p {
+    color: #007BFF;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
