@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Detail Produk</title>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+    background-color: #f4f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    }
+
+    .container {
+    width: 90%;
+    max-width: 1000px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 80px 0;
+    }
+
+    /* Tombol kembali */
+    .back-btn {
+    background: #e3eeff;
+    border: none;
+    color: #007bff;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    align-self: flex-start;
+    }
+
+    .back-btn:hover {
+    background: #d3e4ff;
+    }
+
+    /* Card produk */
+    .product-card {
+    text-align: left;
+    }
+
+
+    .product-image {
+    border-radius: 15px;
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    
+    }
+
+    .product-info {
+    margin-top: 15px;
+    }
+
+    .product-title {
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 5px;
+    }
+
+    .product-desc {
+    color: #555;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    }
+
+    .product-price {
+    color: #007bff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    }
+
+    /* Tombol Checkout */
+    .checkout-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    padding: 12px 0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+    }
+
+    .checkout-btn:hover {
+    background: #0065d1;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Tombol Kembali -->
+    <button class="back-btn" onclick="window.history.back()">← Kembali</button>
+    
+    <!-- Bagian Detail Produk -->
+    <div class="product-card">
+    <img src="../img/advan3.webp" class="product-image" />
+    <div class="product-info">
+        <h2 class="product-title">[FREE STYLUS PEN] ADVAN Laptop 360 Stylush Pro Laptop 2 IN 1 Touchscreen</h2>
+        <p class="product-price">Rp 6.799.000</p>
+        <br>
+        <p class="product-desc">
+            Advan kembali menghadirkan notebook terbaru yang dapat memenuhi kebutuhan pengguna. Advan 360 Stylus Pro hadir dengan versi terbaru Intel Core i3 Gen 12. Advan 360 Stylus Pro hadir dengan banyak fitur terbaru, tentunya spesifikasi dan segala fiturnya mampu memenuhi produktifitas pengguna sehari-hari. <br>
+
+            <br>
+
+            Slim, Sleek, and Stylish.<br>
+            
+            Advan 360 Stylus Pro memiliki desain yang tipis dan modern, serta memiliki lekukan sampai dengan 360º memudahkan dalam penggunaannya. Selain itu berat laptop 360 Stylus Pro hanya ≤1.5kg. Dengan berat yang ringan, laptop ini nyaman dibawa kemanapun tanpa perlu khawatir terbebani.<br>
+            
+            <br>
+            
+            Flexible to Use.<br>
+            
+            Layar Advan 360 Stylus Pro sudah mendukung layar sentuh yang tentunya memberikan pengguna kenyamanan dalam penggunaan. Selain itu juga memiliki 2 in 1 display, dapat membentuk tampilan laptop dan tablet yang dapat di atur sesuai dengan kebutuhan pengguna.<br>
+            
+            <br>
+            
+            Display<br>
+            
+            Advan 360 Stylus Pro memiliki Layar 14 inch 16:10 dengan resolusi FHD dan sudah di lengkapi fitur touchscree dan Anti Glare sehingga sangat nyaan sekali di gunakan saat menggambar, design, sketsa, dll. Fitur anti glare membuat tampilan lebih sempurna jika bekerja di bawah sinar yang terang.<br>
+            
+            <br>
+            
+            Responsive Stylus Pen.<br>
+            
+            Advan 360 Stylus Pro tentunya mendukung penggunaan stylus pen. Kali ini sudah lebih responsive dari versi yang sebelumnya, serta sudah menggunakan sistem pengisian daya pen menggunakan Type-C charging bukan lagi menggunakan baterai A4.<br>
+            
+            <br>
+            
+            Great Performance.<br>
+            
+            Advan 360 Stylus Pro ditenagai prosesor Intel Core i3-1215U yang memiliki kemampuan yang luar biasa maksimal tetapi mampu menyesuaikan daya baterai lebih irit dan efisien. Cocok digunakan untuk pelajar, pekerja, dan desainer, editor, dan lainnya yang mampu menunjang produktivitas sehari-hari.<br>
+            
+            <br>
+            
+            HD Camera with Privacy Shutter.<br>
+            
+            Advan 360 Stylus Pro dibekali HD Camera 720p with privacy switch. Cocok untuk kamu yang sering meeting dadakan dan membutuhkan fleksibilitas penggunaan, serta memberikan keamanan ekstra dalam penggunaannya.<br>
+            
+            <br>
+            
+            Upgradable Storage.<br>
+            
+            Untuk pengguna yang membutuhkan kapasitas penyimanan besar, tidak perlu khawatir. Advan 360 Stylus Pro memiliki storage sebesar 256GB dan masih dapat diupgrade sesuai dengan kebutuhan pengguna. Tersedia single-slot SSD untuk upgrade ke store yang lebih besar.<br>
+            
+            <br>
+            
+            Battery Saving.<br>
+            
+            Kapasitas baterai Advan 360 Stylus Pro adalah 51Wh. Dengan kapasitas baterai yang besar laptop ini mampu menemani aktivitas pengguna seharian tanpa perlu khawatir daya baterai cepat lemah. Penggunaan baterai juga sangat efisien karena dibantu dengan penggunaan processor yang maksimal tetapi dapat mengontrol efisiensi penggunaan daya baterai.<br>
+            
+            <br>
+            
+            <br>
+            
+            <br>
+            
+            Spesifikasi : <br>
+            
+            Dimension : 315.6*229*18.9mm<br>
+            
+            Weight : ≤1.5kg<br>
+            
+            Display : 14.0"FHD IPS 1920*1200 16:10<br>
+            
+            CPU : Intel® Core i3-1215U<br>
+            
+            GPU : Intel® UHD Graphics<br>
+            
+            Memory : 8GB DDR4 <br>
+            
+            Storage : 256GB PCIe 3.0<br>
+            
+            Camera : 720 HD with privacy shutter<br>
+            
+            Wifi 802.11 b/g/n/ac 2.4GHz/5GHz<br>
+            
+            Bluetooth 5.1<br>
+            
+            Battery : 11.5V 51Wh<br>
+            
+            Port Variants :<br>
+            
+            -1* Type C  PD charging only<br>
+            
+            -1* USB3.2 Gen1<br>
+            
+            -1* Type-C (DP,PD,Data,charger）full function<br>
+            
+            -1* Type-C Data Only<br>
+            
+            -1* Standard HDMI 1.4<br>
+            
+            -1* Ø3.5mm Combo<br>
+            
+            -1* RJ45<br>
+            
+            -1* TF card<br>
+            
+            -1*USB 3.2 Gen1  data only<br>
+            
+            <br>
+            
+            Free WINDOWS 11 HOME ORIGINAL<br>
+        </p>
+    </div>
+    </div>
+
+    <!-- Tombol Checkout -->
+    
+        <button class="checkout-btn" onclick="window.location.href='../checkout.html'">Checkout</button>
+    
+
+</div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    nav a {
+    margin-left: 1px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    }
+
+    nav a:hover {
+    color: #007BFF;
+    }
+
+</style>
+<body>
+    <!-- Header -->
+    <header class="headerproduk">
+        <div class="logoproduk">
+            <a href="index.html">LaptopStore</a>
+        </div>
+        <nav class="navindex">
+            <a href="index.html">HOME</a>
+            <a href="#">CATALOG</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <div class="nav-right">
+            <nav>
+                <a href="login.html">LOG OUT</a>
+            </nav>
+        </div>
+        
+    </header>
+    <!-- Produk -->
+    <section id="produk" class="produk">
+        <h2>Temukan Laptop Favoritmu!</h2>
+        
+            <div class="filter-search">
+                <!-- Dropdown Kategori -->
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">Semua</button>
+                    <div id="dropdown-content" class="dropdown-content">
+                        <button onclick="filterKategori('all')">Semua</button>
+                        <button onclick="filterKategori('Axioo')">Axioo</button>
+                        <button onclick="filterKategori('Advan')">Advan</button>
+                        <button onclick="filterKategori('Lenovo')">Lenovo</button>
+                    </div>
+                </div>
+        
+                <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Cari produk..." onkeyup="searchProduk()">
+                </div>
+            </div>
+        
+        </section>
+
+        <!-- FILTER END -->
+
+        <div class="grid-produk">
+
+                <!-- Advan -->
+
+            <div class="card" data-kategori="Advan">
+                <img src="img/advan1.webp" alt="Laptop 1">
+                <h3>[NEW LAUNCH] ADVAN Soulmate X</h3>
+                <p>Rp 2.499.000</p>
+                <a href="Detail/advan1.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+            <div class="card" data-kategori="Advan">
+                <img src="img/advan2.webp" alt="Laptop 1">
+                <h3>ADVAN WorkPro Lite Intel i3-1220P</h3>
+                <p>Rp 4.699.000</p>
+                <a href="Detail/advan2.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+            <div class="card" data-kategori="Advan">
+                <img src="img/advan3.webp" alt="Laptop 1">
+                <h3> ADVAN Laptop 360 Stylush Pro Touchscreen</h3>
+                <p>Rp 6.799.000</p>
+                <a href="Detail/advan3.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+            <div class="card" data-kategori="Advan">
+                <img src="img/advan4.webp" alt="Laptop 1">
+                <h3>ADVAN Workplus AMD Ryzen 5 6600H<h3>
+                <p>Rp 8.399.000</p>
+                <a href="Detail/advan4.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+            
+            <!-- Axioo -->
+            <div class="card" data-kategori="Axioo">
+                <img src="img/axioo1.webp" alt="Laptop ">
+                <h3>Axioo Laptop Hype 10 Intel Celeron N4020</h3>
+                <p>Rp 3.149.000</p>
+                <a href="Detail/axioo1.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+            <div class="card" data-kategori="Axioo">
+                <img src="img/axioo2.webp" alt="Laptop 2">
+                <h3>Axioo Laptop Hype 3 G11 Intel Core i3</h3>
+                <p>Rp 4.399.000</p>
+                <a href="Detail/axioo2.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+            <div class="card" data-kategori="Axioo">
+                <img src="img/axioo3.webp" alt="Laptop 2">
+                <h3>Axioo Laptop Hype 5 AMD X3 Ryzen 5</h3>
+                <p>Rp 4.649.000</p>
+                <a href="Detail/axioo3.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+            
+            <div class="card" data-kategori="Axioo">
+                <img src="img/axioo4.webp" alt="Laptop 2">
+                <h3>Axioo Laptop Gaming Pongo 735 Intel i7</h3>
+                <p>Rp 12.749.000</p>
+                <a href="Detail/axioo4.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+
+            
+        
+                <!-- Lenovo -->
+
+            <div class="card" data-kategori="Lenovo">
+                <img src="img/lenovo1.webp" alt="Laptop 3">
+                <h3>Lenovo V15 i3-1315U 512GB SSD 8GB FHD IPS Win11+OHS</h3>
+                <p>Rp 6.679.000</p>
+                <a href="Detail/lenovo1.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+            <div class="card" data-kategori="Lenovo">
+                <img src="img/lenovo2.webp" alt="Laptop 3">
+                <h3>LENOVO V15 GEN 5 G5 IRL 8NID LUNA GREY</h3>
+                <p>Rp 6.545.000</p>
+                <a href="Detail/lenovo2.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+            <div class="card" data-kategori="Lenovo">
+                <img src="img/lenovo3.webp" alt="Laptop 3">
+                <h3>Lenovo V14 Ryzen 3 7320U 256GB/512GB SSD 8GB</h3>
+                <p>Rp 5.879.000</p>
+                <a href="Detail/lenovo3.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+            <div class="card" data-kategori="Lenovo">
+                <img src="img/lenovo4.webp" alt="Laptop 3">
+                <h3>Lenovo ThinkPad E14 Gen 7 0C00 Intel Core 3 100U</h3>
+                <p>Rp 11.700.000</p>
+                <a href="Detail/lenovo4.html"><button>Detail</button></a>
+                <button class="cekot">Checkout</button>
+            </div>
+           
+            
+        </div>
+    </section>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <script>
+
+// Pilih semua tombol yang punya class "pindah"
+const tombol = document.querySelectorAll('.cekot');
+
+// Tambahkan event klik ke semua tombol tersebut
+tombol.forEach(btn => {
+  btn.addEventListener('click', () => {
+    window.location.href = 'checkout.html'; // halaman tujuan
+  });
+});
+
+
+
+
+        function filterKategori(kategori) {
+         const cards = document.querySelectorAll('.card');
+             cards.forEach(card => {
+                 if (kategori === 'all' || card.dataset.kategori === kategori) {
+                    card.style.display = 'block';
+                 } else {
+                      card.style.display = 'none';
+             }
+            });
+         }
+
+        //  searcbar
+        function cariProduk() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        const namaProduk = card.querySelector('h3').textContent.toLowerCase();
+        if (namaProduk.includes(input)) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+    function filterKategori(kategori) {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            if (kategori === 'all' || card.dataset.kategori === kategori) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // ubah teks tombol dropdown sesuai kategori
+        document.querySelector('.dropbtn').textContent = kategori === 'all' ? 'Semua' : kategori;
+        document.getElementById('dropdown-content').style.display = 'none';
+    }
+
+    // tampilkan/sembunyikan dropdown
+    function toggleDropdown() {
+        const dropdown = document.getElementById('dropdown-content');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // pencarian produk
+    function searchProduk() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            const nama = card.querySelector('h3').textContent.toLowerCase();
+            card.style.display = nama.includes(input) ? 'block' : 'none';
+        });
+    }
+
+    // tutup dropdown saat klik di luar
+    window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            document.getElementById('dropdown-content').style.display = 'none';
+        }
+    }
+
+
+    </script>
+</body>
+</html>
